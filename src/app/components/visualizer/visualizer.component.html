@@ -1,0 +1,21 @@
+<section class="visualizer">
+
+  <split-visualizer class="visualizer__split" [sceneImg]="sceneImg" [lensesImg]="lensesImg">
+  </split-visualizer>
+
+  <footer class="visualizer__footer">
+
+    <section>{{ dataSrv.defaultScene }}</section>
+
+    <section *ngIf="sceneList">
+      <select [(ngModel)]="currentScene" (change)="onSelectChange()">
+        <option *ngFor="let scene of sceneList" [value]="scene.sceneName">
+          {{ scene.sceneName }}
+        </option>
+      </select>
+    </section>
+
+    <section> {{ lensType }}</section>
+
+  </footer>
+</section>

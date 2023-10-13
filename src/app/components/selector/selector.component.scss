@@ -1,0 +1,17 @@
+.selector {
+  background-color: white;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  &__footer {
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+  }
+}

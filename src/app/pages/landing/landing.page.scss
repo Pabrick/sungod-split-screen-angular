@@ -1,0 +1,30 @@
+.landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: 50% auto;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "viewer"
+    "selector";
+
+  &__viewer {
+    grid-area: viewer;
+  }
+
+  &__selector {
+    grid-area: selector;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .landing {
+    grid-template-rows: 100%;
+    grid-template-columns: auto 70%;
+    grid-template-areas: "selector viewer";
+  }
+}

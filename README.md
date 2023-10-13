@@ -1,27 +1,47 @@
 # Sungod
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+## How to test the app
 
-## Development server
+- npm i
+- ng serve
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Considerations
 
-## Code scaffolding
+- Database ends points were bigger that expected, so in order to simplify the test I have used some mock lists in the lenses menu.
+- SASS has been used to simplify styling. If the whole feature was implemented for real, it could be used with better styles or using Tailwind if desired.
+- The feature is responsive as showed on the Figma file, but it only has tested on Chrome browsers.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Components architecture
 
-## Build
+Component splitting (from top to bottom):
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Stimated time:
 
-## Running unit tests
+- Split Image visualizer: 8 hours.
+- Collapsable menu button: 6 hours.
+- Tabs component: already done!
+- Colour picker menu: already done!
+- Tooltip: 6 hours (first iteration it may vary in the future)
+- Lenses button menu (I couldn't find it in the website): 2 hours.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Split Image visualizer:
 
-## Running end-to-end tests
+- Aside of what is currently done, it needs loading icon (already done in the website).
+- Test if draggind works well on different device (some mobile devices had limits on their sides).
+- Improve cashing to improve performance in different devices.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Collapsable menu button:
 
-## Further help
+- A button that shows an image or an icon. When is clicked expand a menu (on the selected direction).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Tooltip:
+
+- Define if this overlay will be on top of other layers (basket, cookies, popups, etc).
+
+Lenses button menu:
+
+- A button with coloured border (tbd) that accepts an icon or a logo.
+
+Risks:
+As mentioned before, some browsers and mobile devices or touch screens has limitations on the touch areas,
+so it would be higly recommended study which devices are most used by the users, to address those devices first.

@@ -1,0 +1,12 @@
+<section class="selector">
+  selector!
+  <tab-menu></tab-menu>
+
+  <colour-menu *ngIf="isColourMenuOn"></colour-menu>
+  <lens-menu *ngIf="!isColourMenuOn" [lensList]="lenseList"></lens-menu>
+
+  <footer class="selector__footer">
+    <section>Left</section>
+    <section>Right</section>
+  </footer>
+</section>

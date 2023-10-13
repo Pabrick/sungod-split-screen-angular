@@ -1,0 +1,10 @@
+<section>
+  <ul>
+    <li *ngFor="let lens of lensList">
+      <button (click)="selectLens(lens)">
+        {{ lens }}
+      </button>
+    </li>
+  </ul>
+
+</section>
